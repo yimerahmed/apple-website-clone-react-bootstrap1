@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Submission Form</title>
+</head>
+<body>
+
+    <h1>Media Submission Form</h1>
+    <form action="http://localhost:700/submit" method="post" enctype="multipart/form-data">
+        <h2>Image Details</h2>
+        <label for="imageTitle">Image Title:</label><br>
+        <input type="text" id="imageTitle" name="imageTitle" ><br><br>
+
+        <label for="imageDescription">Image Description:</label><br>
+        <textarea id="imageDescription" name="imageDescription" rows="4" cols="50" ></textarea><br><br>
+
+        <label for="imageFile">Image File:</label><br>
+        <input type="file" id="imageFile" name="imageFile" accept="image/*" ><br><br>
+
+        <h2>General Description</h2>
+        <label for="generalDescription">Description:</label><br>
+        <textarea id="generalDescription" name="generalDescription" rows="4" cols="50" ></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+    <!-- <form action="http://localhost:700/submit" method="post" enctype="multipart/form-data">
+
+        <h2>Video Details</h2>
+        <label for="videoTitle">Video Title:</label><br>
+        <input type="text" id="videoTitle" name="videoTitle" ><br><br>
+
+        <label for="videoSubtitle">Video Subtitle:</label><br>
+        <input type="text" id="videoSubtitle" name="videoSubtitle"><br><br>
+
+        <label for="videoFile">Video File:</label><br>
+        <input type="file" id="videoFile" name="videoFile" accept="video/*" ><br><br>
+        <input type="submit" value="Submit">
+    </form> -->
+</body>
+</html>

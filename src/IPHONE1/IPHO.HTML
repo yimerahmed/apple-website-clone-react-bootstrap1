@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Submission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], 
+        textarea, 
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Submission Form</h1>
+    <form action="http://localhost:7000/submit" method="POST" enctype="multipart/form-data">
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" name="name" >
+
+        <label for="product-feature">Product Feature:</label>
+        <input type="text" id="product-feature" name="feature" >
+
+        <label for="product-price">Product price:</label>
+        <input type="text" id="price" name="price" >
+
+        <label for="product-image">Product Image (optional):</label>
+        <input type="file" id="product-image" name="product-image">
+
+        <label for="main-description">Main Description:</label>
+        <textarea id="main-description" name="main-description" rows="4" ></textarea>
+
+        <label for="detail-description">Detail Description:</label>
+        <textarea id="detail-description" name="detail-description" rows="4" ></textarea>
+
+        <label for="description-image">Description Image (optional):</label>
+        <input type="file" id="description-image" name="description-image">
+
+        <label for="detail-description-image">Detail Description Image (optional):</label>
+        <input type="file" id="detail-description-image" name="detail-description-image">
+
+        <input type="submit" value="Submit Product">
+    </form>
+</body>
+</html>

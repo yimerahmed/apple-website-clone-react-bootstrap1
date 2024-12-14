@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Upload Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #productForm{
+        margin: top 20px;
+    }
+    </style>
+</head>
+<body>
+
+
+
+  <h1>Product Submission Form</h1>
+    <form action="http://localhost:700/upload" id="productForm" enctype="multipart/form-data" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" ><br><br>
+
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName"><br><br>
+
+        <label for="version">Version:</label>
+        <input type="text" id="version" name="version" ><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" ></textarea><br><br>
+
+        <label for="detailedDescription">Detailed Description:</label>
+        <textarea id="detailedDescription" name="detailedDescription" ></textarea><br><br>
+
+        <label for="uploadImage">Upload Image:</label>
+        <input type="file" id="uploadImage" name="image" accept="image/*" ><br><br>
+
+        <label for="imageFunction">Image Function:</label>
+        <input type="text" id="imageFunction" name="imageFunction" ><br><br>
+
+        <label for="video">Upload Video:</label>
+        <input type="file" id="video" name="video" accept="video/*" ><br><br>
+
+        <label for="videoTitle">Video Title:</label>
+        <input type="text" id="videoTitle" name="videoTitle" ><br><br>
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" step="0.01" ><br><br>
+
+        <label for="additionalDetails">Additional Details:</label>
+        <textarea id="additionalDetails" name="details"></textarea><br><br>
+
+        <label for="orderQuantity">Order Quantity:</label>
+        <input type="text" id="orderQuantity" name="order" ><br><br>
+
+        <button type="submit">Submit Product</button>
+    </form>
+
+    <div id="response"></div>
+
+</body>
+</html>

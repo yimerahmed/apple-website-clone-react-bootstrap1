@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+</head>
+<body>
+    <h1>Product Information Form</h1>
+    <form action="http://localhost:700/upload" method="post" enctype="multipart/form-data">
+        <label for="productName">Product Name:</label><br>
+        <input type="text" id="productName" name="productName" ><br><br>
+
+        <label for="image">Image Upload:</label><br>
+        <input type="file" id="image" name="image" accept="image/*" ><br><br>
+
+        <label for="version">Version:</label><br>
+        <input type="text" id="version" name="version" ><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
